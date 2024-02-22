@@ -394,7 +394,7 @@ html section article .another-quote p q::before{
 html section article ul.related-posts {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
   gap: 16px;
 }
 html section article ul.related-posts li.card{
@@ -660,9 +660,9 @@ html footer.footer .footer_main .footer_main__right .footer_suscribe p {
 html footer.footer .footer_copyright {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: relative;
-  gap: 442px;
+  /* gap: 442px; */
 }
 html footer.footer .footer_copyright::before {
   content: '';
@@ -695,7 +695,48 @@ html footer.footer .footer_copyright ul li a:hover{
   color: var(--Primary-500);
 }
 
-/* Media queries */
+/*************************** Media queries */
+@media (1024px <= width <= 1440px ){
+  html header.header {
+    padding: 23px 20px;
+  }
+  html .main-hero {
+    height: 450px;
+  }
+  html .main-hero .main-hero__text {
+    right: 88px;
+  }
+  html section {
+    width: calc(100% - 391px);
+    padding-left: 58px;
+  }
+  html section article ul.related-posts_hrz li.card_horizontal .content header {
+    padding: 15px;
+    gap: 5;
+  }
+  html section article ul.related-posts_hrz li.card_horizontal picture {
+    width: 185px;
+  }
+  html section article ul.related-posts_hrz li.card_horizontal .content {
+    width: calc(100% - 187px);
+  }
+  html section article ul.related-posts_hrz li.card_horizontal .content footer {
+    padding: 4px 15px;
+  }
+  html footer.footer {
+    padding: 25px 20px;
+  }
+  html footer.footer .footer_main .footer_main__right {
+    max-width: 390px;
+  }
+  html footer.footer .footer_copyright{
+    margin-top: 20px;
+  }
+  html footer.footer .footer_copyright p,
+  html footer.footer .footer_copyright ul {
+    margin-top: 20px;
+  }
+}
 @media (width < 1024px){
   html header.header {
     padding: 0px;
