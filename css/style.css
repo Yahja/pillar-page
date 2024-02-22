@@ -631,6 +631,7 @@ html footer.footer .footer_main .footer_main__right .footer_suscribe form label 
   color: var(--Typography-Body);
   font-size: 1.12rem;
   font-weight: 700;
+  display: block;
 }
 html footer.footer .footer_main .footer_main__right .footer_suscribe form input {
   border-radius: 8px;
@@ -810,5 +811,13 @@ html footer.footer .footer_copyright ul li a:hover{
   }
   html footer.footer .footer_copyright ul {
     margin-block: 20px;
+  }
+}
+@media (640px <= width <= 1023px){
+  html section article ul.related-posts_hrz {
+    flex-direction: row;
+  }
+  html footer.footer .footer_main .footer_main__right {
+    max-width: 100%;
   }
 }
