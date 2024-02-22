@@ -41,6 +41,7 @@ function toggleAside(){
   const getBody = document.body;
   const getAsideNav = document.getElementById('asideNav');
   
+  
   getAsideNav.setAttribute('onclick', 'toggleAside()');
   getBody.classList.toggle('disable-scroll');
   getAside.classList.toggle('hide');
@@ -55,7 +56,9 @@ function checkViewPort(){
   const getMain = document.getElementsByTagName('main')[0];
 
   if (window.matchMedia('(max-width: 640px)').matches){
-    getNav.classList.add('hide');
+    getNav.classList.add('hide');    
+    getIndiceLink.append(getAside);
+    getAside.classList.add('hide');
   } else if (window.matchMedia('(max-width: 1023px)').matches){
     getIndiceLink.append(getAside);
     getAside.classList.add('hide');
