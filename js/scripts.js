@@ -62,10 +62,10 @@ function checkViewPort(){
   } else {
     getNav.classList.remove('hide');
     getMain.insertBefore(getAside, getMain.children[0]);
+    toogleActiveAside();
   }
 }
 
 window.addEventListener('resize', checkViewPort);
-toogleActiveAside();
 checkViewPort();
 scrollProgressBard();
