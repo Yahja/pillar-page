@@ -12,6 +12,20 @@ function scrollProgressBard(){
   });
 }
 
+function toogleActiveAside(){
+  const asideLinks = document.getElementsByClassName('aside-link')
+
+  for (let i = 0; i < asideLinks.length; i++){
+    asideLinks[i].addEventListener('click', function(){
+      const current = document.getElementsByClassName('active');
+      if (current.length > 0){
+        current[0].className = current[0].className.replace(' active', '');
+      }
+      this.className += " active";
+    });
+  }
+}
+
 // Function show and hide menu in mobile version
 function toggleNavMobile() {
   const getNav = document.querySelector('.main-nav');
@@ -20,7 +34,6 @@ function toggleNavMobile() {
   getNav.classList.toggle('hide');
   getButton.classList.toggle('open');
 }
-
 
 // Function show and hide Aside content links in mobile
 function toggleAside(){
@@ -53,6 +66,6 @@ function checkViewPort(){
 }
 
 window.addEventListener('resize', checkViewPort);
-
+toogleActiveAside();
 checkViewPort();
 scrollProgressBard();

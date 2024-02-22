@@ -203,12 +203,13 @@ html main aside nav > ul {
   flex-direction: column;
   gap: 16px;
 }
-html main aside nav > ul > li > a {
+html main aside nav > ul > li > a.aside-link {
   color: var(--Grey-Blue-600);
   font-weight: 700;
 }
-html main aside nav > ul > li a:hover,
-html main aside nav > ul > li a:active {
+html main aside nav > ul > li a.aside-link:hover,
+html main aside nav > ul > li a.aside-link:active,
+html main aside nav > ul > li a.aside-link.active {
   color: var(--Primary-500);
 }
 html main aside nav ul > li > ul {
