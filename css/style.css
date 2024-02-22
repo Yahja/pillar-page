@@ -818,12 +818,80 @@ html footer.footer .footer_copyright ul li a:hover{
   }
 }
 @media (width <= 1023px){
+  html body.disable-scroll {
+    overflow: hidden;
+  }
   html header.header {
     background: var(--Primary-600);
   }
   html header.header .header_left__logo {
     width: 40px;
     margin: 10px;
+  }
+  html .guarda-indice-contenuto {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 8;
+    background: var(--Primary-600);
+  }
+  html .guarda-indice-contenuto a {
+    color: var(--White);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  html .guarda-indice-contenuto a span {
+    rotate: -90deg;
+  }
+
+  html .guarda-indice-contenuto aside {
+    background: var(--Grey-Blue-100);
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+  }
+  html .guarda-indice-contenuto aside.hide {
+    display: none;
+  }
+  html .guarda-indice-contenuto aside h3 {
+    display: none;
+  }
+
+  html .guarda-indice-contenuto aside nav {
+    overflow: auto;
+    height: 250px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  html .guarda-indice-contenuto aside nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  html .guarda-indice-contenuto aside nav ul li a {
+    padding: 0px;
+    justify-content: start;
+    color: var(--Grey-Blue-600);
+    font-weight: 700;
+  }
+  html .guarda-indice-contenuto aside nav ul > li > ul {
+    margin-top: 17px;
+    padding-left: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  html .guarda-indice-contenuto aside nav ul > li > ul > li > a {
+    color: var(--Grey-Blue-900);
+    font-weight: 400;
   }
 }
 @media (640px <= width <= 1023px){
@@ -878,7 +946,7 @@ html footer.footer .footer_copyright ul li a:hover{
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   }
 
-  html header.header .header_left nav.main-nav {
+  html header.header .header_left nav.main-nav.hide {
     display: none;
   }
   html header.header .header_left nav.main-nav ul {

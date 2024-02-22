@@ -1,5 +1,6 @@
 'use-stric';
 
+// Function scroll progress bar
 function scrollProgressBard(){
   const scrollProgress = document.getElementById('scroll-progress');
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -11,15 +12,47 @@ function scrollProgressBard(){
   });
 }
 
+// Function show and hide menu in mobile version
 function toggleNavMobile() {
-  var getNav = document.querySelector('.main-nav');
-  var getButton = document.querySelector('.header-menu-mobile-toggle');
-  if (getNav.style.display === 'block') {
-    getNav.style.display = 'none';
-  } else {
-    getNav.style.display = 'block';
-  }
+  const getNav = document.querySelector('.main-nav');
+  const getButton = document.querySelector('.header-menu-mobile-toggle');
+  
+  getNav.classList.toggle('hide');
   getButton.classList.toggle('open');
 }
 
+
+// Function show and hide Aside content links in mobile
+function toggleAside(){
+  const getAside = document.getElementsByTagName('aside')[0];
+  const getBody = document.body;
+  const getAsideNav = document.getElementById('asideNav');
+  
+  getAsideNav.setAttribute('onclick', 'toggleAside()');
+  getBody.classList.toggle('disable-scroll');
+  getAside.classList.toggle('hide');
+  getAsideNav.scrollTop = 0;
+}
+
+// Function check the browser viewport and hide elements (like navbar, and sidebar) to the mobile version
+function checkViewPort(){
+  const getNav = document.querySelector('.main-nav');
+  const getAside = document.getElementsByTagName('aside')[0];
+  const getIndiceLink = document.querySelector('.guarda-indice-contenuto');
+  const getMain = document.getElementsByTagName('main')[0];
+
+  if (window.matchMedia('(max-width: 640px)').matches){
+    getNav.classList.add('hide');
+  } else if (window.matchMedia('(max-width: 1023px)').matches){
+    getIndiceLink.append(getAside);
+    getAside.classList.add('hide');
+  } else {
+    getNav.classList.remove('hide');
+    getMain.insertBefore(getAside, getMain.children[0]);
+  }
+}
+
+window.addEventListener('resize', checkViewPort);
+
+checkViewPort();
 scrollProgressBard();
