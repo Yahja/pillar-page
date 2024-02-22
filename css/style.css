@@ -69,6 +69,7 @@ html {
   font-family: var(--Primary-Font);
   background-color: var(--Grey-50);
   color: var(--Typography-Headings);
+  scroll-behavior: smooth;
 }
 /* Header / menú / lang and button */
 html header.header {
@@ -935,18 +936,15 @@ html footer.footer .footer_copyright ul li a:hover{
   html header.header {
     box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.5);
   }
-
   html header.header .header_left nav.main-nav {
     width: 40%;
     position: absolute;
     top: 60px;
     left: 0px;
-    right: 0px;
     background: var(--Primary-600);
     border-radius: 0px 0px 10px 10px;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);    
   }
-
   html header.header .header_left nav.main-nav.hide {
     display: none;
   }
