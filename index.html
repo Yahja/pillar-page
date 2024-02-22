@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
   <title>Pillar test</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,9 +202,10 @@
         <h3>Marketing Tips</h3>
         <ul class="related-posts">
           <li class="card">
-            <figure>
-              <img src="./images/image-card-01.jpg" alt="Marketing tips one">
-            </figure>
+            <picture>
+              <source srcset="./images/image-card-01-mobile.png" media="(max-width: 768px)" />
+              <img src="./images/image-card-01.png" alt="Marketing tips one">
+            </picture>
             <header>
               <h3>Sed viverra nisl ac ex euismod</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra nisl ac ex euismod, sit amet porta quam consectetur.</p>
@@ -214,9 +215,10 @@
             </footer>
           </li>
           <li class="card">
-            <figure>
-              <img src="./images/image-card-02.jpg" alt="Marketing tips two">
-            </figure>
+            <picture>
+              <source srcset="./images/image-card-02-mobile.png" media="(max-width: 768px)" />
+              <img src="./images/image-card-02.png" alt="Marketing tips two">
+            </picture>
             <header>
               <h3>Sed viverra nisl ac ex euismod</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra nisl ac ex euismod, sit amet porta quam consectetur.</p>
@@ -233,9 +235,10 @@
         <h3>Risorse da non perdere</h3>
         <ul class="related-posts_hrz">
           <li class="card_horizontal">
-            <figure>
+            <picture>
+              <source srcset="./images/image-card-03-mobile.png" media="(max-width: 768px)" />
               <img src="./images/image-card-03.png" alt="Risorse da non perdere one"/>
-            </figure>
+            </picture>
             <div class="content">
               <header>
                 <h3>Sed viverra nisl ac ex euismod</h3>
@@ -247,9 +250,10 @@
             </div>
           </li>
           <li class="card_horizontal">
-            <figure>
+            <picture>
+              <source srcset="./images/image-card-04-mobile.png" media="(max-width: 768px)" />
               <img src="./images/image-card-04.png" alt="Risorse da non perdere due" />
-            </figure>
+            </picture>
             <div class="content">
               <header>
                 <h3>Sed viverra nisl ac ex euismod</h3>

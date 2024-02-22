@@ -404,7 +404,7 @@ html section article ul.related-posts li.card{
   flex-direction: column;
   gap: 24px;
 }
-html section article ul.related-posts li.card figure img {
+html section article ul.related-posts li.card picture img {
   width: 100%;
 }
 html section article ul.related-posts li.card header{
@@ -466,10 +466,10 @@ html section article ul.related-posts_hrz li.card_horizontal {
   flex-direction: row;
   /* height: 192px; */
 }
-html section article ul.related-posts_hrz li.card_horizontal figure {
+html section article ul.related-posts_hrz li.card_horizontal picture {
   width: 230px;
 }
-html section article ul.related-posts_hrz li.card_horizontal figure img {
+html section article ul.related-posts_hrz li.card_horizontal picture img {
   width: 100%;
 
 }
@@ -693,4 +693,81 @@ html footer.footer .footer_copyright ul li a {
 }
 html footer.footer .footer_copyright ul li a:hover{
   color: var(--Primary-500);
+}
+
+/* Media queries */
+@media (width < 1024px){
+  html header.header {
+    padding: 0px;
+  }
+  html header.header .header_left,
+  html header.header .header_right {
+    display: none;
+  }
+  html .main-hero {
+    height: 400px;
+  }
+  html .main-hero .main-hero__read-time {
+    left: 20px;
+    bottom: 20px;
+  }
+  html .main-hero .main-hero__text {
+    left: 20px;
+    right: 20px;
+    bottom: 72px;
+  }
+  html main aside {
+    display: none;
+    padding: 0px;
+  }
+  html section {
+    padding-inline: 20px;
+    width: 100%;
+  }
+  html section article .content-table {
+    border: 1px solid var(--Black);
+    border-radius: 11px;
+    padding-bottom: 0px;
+  }
+  html section article .table-responsive {
+    border: none;
+  }
+  
+  html section article ul.related-posts_hrz li.card_horizontal {
+    flex-direction: column;
+  }
+  html section article ul.related-posts_hrz li.card_horizontal picture,
+  html section article ul.related-posts_hrz li.card_horizontal .content {
+    width: 100%;
+  }
+  /* Responsive footer */
+  html footer.footer {
+    padding: 20px;
+  }
+  html footer.footer .footer_main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  html footer.footer .footer_main .footer_main__left .footer_sitemap {
+    padding: 0px;
+  }
+  html footer.footer .footer_main .footer_main__left .footer_sitemap ul {
+    min-width: unset;
+  }
+  html footer.footer .footer_main .footer_main__left .footer_discover {
+    margin-top: 20px;
+  }
+  html footer.footer .footer_main .footer_main__right .footer_suscribe {
+    margin-top: 30px;
+  }
+  html footer.footer .footer_copyright {
+    flex-direction: column;
+    gap: 0;
+  }
+  html footer.footer .footer_copyright p {
+    margin-top: 20px;
+  }
+  html footer.footer .footer_copyright ul {
+    margin-block: 20px;
+  }
 }
