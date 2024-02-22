@@ -13,13 +13,17 @@
 <body>
   <header class="header">
     <div class="header_left">
+      <button class="header-menu-mobile-toggle open" aria-label="Open menu" onclick="toggleNavMobile()"></button>
       <div class="header_left__logo">
         <a href="/" aria-label="Go to homepage" aria-current="page">
-          <img src="./images/Pillar-Logo.svg" alt="Pillar logo" >
+          <picture>
+            <source srcset="./images/Pillar-Logo-mobile.png" media="(max-width: 1023px)" />
+            <img src="./images/Pillar-Logo.svg" alt="Pillar logo" >
+          </picture>
         </a>
       </div>
       
-      <nav role="navigation">
+      <nav role="navigation" class="main-nav">
         <ul>
           <li><a role="link" href="#">Landing</a></li>
           <li><a role="link" href="#">Theme</a></li>
